@@ -1,6 +1,5 @@
-# manatax.github.io
-
-### Hosted @ pages.github.com
+# [manatax.github.io](https://manatax.github.io)
+This site was built using [GitHub Pages](https://pages.github.com/).
 
 ### Commands:
 
