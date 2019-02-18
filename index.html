@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Github specific redirect hack for free SPA hosting -->
+    <script>
+        (function () {
+            var redirect = sessionStorage.redirect;
+            delete sessionStorage.redirect;
+            if (redirect && redirect != location.href) {
+                history.replaceState(null, null, redirect);
+            }
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Web Components</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+        }
+
+        .container {
+            margin: 0;
+            padding: 10px;
+        }
+
+        h2 {
+            margin: 0 10px 0 0;
+            display: inline-block;
+            font-size: 20px;
+        }
+
+        h2 a {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <h2><a href="./">Home</a></h2>
+            <h2><a href="./ViewOne">Page One</a></h2>
+            <h2><a href="./ViewTwo">Page Two</a></h2>
+        </nav>
+    </div>
+    <div id="main" class="container"></div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
